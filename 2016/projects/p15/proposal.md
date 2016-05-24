@@ -4,28 +4,23 @@ mathjax: true
 permalink: /projects/p15/proposal/
 ---
 
-## 资金流入流出预测
+## Which shots did Kobe sink?
 
 ### 成员
 
-- 郭沛东
-- 钟尚桦
-- 吴凡
+- 王亚军  2120150937
+- 范勇    2520150264
+- 邢奕鹏  2520150263
 
 ### 说明
 
-根据用户的历史资金流入流出数据与宏观的历史数据，预测未来一段时间的宏观资金流入流出状况。
+根据科比二十年职业生涯的投篮数据，预测科比下一次投篮是否会命中。
 
 ### 数据集
 
-主要由四部分组成，用户基本信息数据、用户申购赎回数据、收益率表和银行间拆借利率表。
+stats.nba.com中获得科比投篮数据
 
-### 评估指标
+### 具体说明
+Kobe Bryant marked his retirement from the NBA by scoring 60 points in his final game as a Los Angeles Laker on Wednesday, April 12, 2016. Drafted into the NBA at the age of 17, Kobe earned the sport’s highest accolades throughout his long career.
 
-采用天池数据比赛的评估方法
-
-1) 计算所有用户在测试集上每天的申购及赎回总额与实际情况总额的误差。
-
-2) 申购预测得分与 Purchasei 相关，赎回预测得分与 Redeemi 相关 , 误差与得分之间的计算公式不公布，但保证该计算公式为单调递减的，即误差越小，得分越高，误差与大，得分越低。当第 i 天的申购误差 Purchasei =0 ，这一天的得分为 10 分；当 Purchasei > 0.3 ，其得分为 0 。
-
-3) 最后公布总积分 = 申购预测得分 *45%+ 赎回预测得分 *55% 。 
+Using 20 years of data on Kobe's swishes and misses, can you predict which shots will find the bottom of the net? This competition is well suited for practicing classification basics, feature engineering, and time series analysis.
